@@ -1,0 +1,7 @@
+.playingImg {
+  display: inline-block; }
+  .playingImg img {
+    max-height: 50px; }
+
+.playerName {
+  display: inline-block; }
