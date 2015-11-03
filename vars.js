@@ -70,19 +70,3 @@ function getChampion() {
     }
   });
 }
-
-
-
-var templates ={
-  curPlaying:[
-    '<div class="playerbox">',
-    '<div class="playingImg">',
-    '<img src="<%=champImg%> " alt="">',
-    '</div>',
-    '<div class="playerName">',
-    '<h2 class="player"><%=name%></h2>',
-    '</div>',
-    '</div>',
-  ].join(""),
-
-}

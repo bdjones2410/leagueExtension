@@ -1,6 +1,4 @@
-$(document).ready(function() {
 
-});
 
   var playing ={
 
@@ -10,25 +8,22 @@ $(document).ready(function() {
       },
 
       styling: function(){
-        playing.loadTemp($('body'), playersnChamps, 'curPlaying')
+        var curPlaying ="";
+          _.each(playersnChamps, function(el){
+            curPlaying += '<div class="playerbox">'
+            +'<div class="playingImg">'
+            +'<img src="'
+            +el.champImg
+            +'" alt="">'
+            +'</div>'
+            +'<div class="playerName">'
+            +'<h2 class="player">'
+            +el.name
+            +'</h2>'
+            +'</div>'
+            +'</div>'
+        });
+        $('.curentlyPlaying').html(curPlaying);
       },
-
-      getTemplate: function(tmpl){
-        return _.template(templates[tmpl]);
-      },
-
-      loadTemp: function($el, data, tmpl){
-        playerHtml = "";
-        var template = playing.getTemplate(tmpl);
-        _.each(data, function(curel){
-          playerHtml += template(curel);
-        })
-        $el.html(playerHtml);
-      },
-
-
-
-
-
 
   };
